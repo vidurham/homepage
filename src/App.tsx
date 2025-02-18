@@ -1,6 +1,9 @@
 import React from 'react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
 
+// Add this constant at the top of your file
+const BASE_PATH = process.env.PUBLIC_URL || '';
+
 function App() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -8,7 +11,7 @@ function App() {
       <nav className="fixed w-full bg-black/80 backdrop-blur-sm z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-center">
-            <img src="/LucidBots_Colored_Logo_Full.png" alt="Lucid Bots" className="h-8" />
+            <img src={`${BASE_PATH}/LucidBots_Colored_Logo_Full.png`} alt="Lucid Bots" className="h-8" />
           </div>
         </div>
       </nav>
@@ -22,7 +25,7 @@ function App() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         >
-          <source src="/videoplayback.mp4" type="video/mp4" />
+          <source src={`${BASE_PATH}/videoplayback.mp4`} type="video/mp4" />
         </video>
         <div className="container mx-auto px-6 relative z-10 h-full pt-32">
           <div className="max-w-2xl">
